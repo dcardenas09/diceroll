@@ -1,0 +1,43 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>DICE ROLL!</title>
+        <style>
+        .image {
+          height: 400px;
+          width: 400px;
+          position: relative;
+        }
+        #dice {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        .text {
+          z-index: 100;
+          position: absolute;
+          color: black;
+          font-size: 100px;
+          font-weight: bold;
+          left: 270px;
+          top: 95px;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div class="image"><img id=dice src="img/hexagon.jpg">
+        </div>
+        <div class="text">
+            <h2 id="number">0</h2>
+        </div>
+    
+    </body>
+    <script>
+        document.getElementById("dice").onclick = diiRoll;
+        function diiRoll(){
+            var dice = Math.round(Math.random()*5+1);
+            document.getElementById("number").innerHTML = "<h2>"+dice+"</h2>";
+        }
+    </script>
+</html>
